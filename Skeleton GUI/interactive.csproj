@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{639AF4EA-A798-3EEE-A058-EEFFF30FF62B}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>interactive</ProjectName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+    <ApplicationIcon>C:/Users/Chepo/Cubemos-Samples/src/res/icon/logo.ico</ApplicationIcon>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <OutputPath>C:\Users\Chepo\Cubemos-Samples\build\csharp\interactive\Debug\</OutputPath>
+    <PlatformTarget>x64</PlatformTarget>
+    <PlatformToolset>v141</PlatformToolset>
+    <AssemblyName>csharp-interactive</AssemblyName>
+    <StartAction>Program</StartAction>
+    <StartProgram>C:\Users\Chepo\Cubemos-Samples\build\csharp\interactive\Debug\csharp-interactive.exe</StartProgram>
+    <AdditionalOptions>/EHsc /FS</AdditionalOptions>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <DefineConstants>TRACE;DEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <LangVersion>6</LangVersion>
+    <Optimize>false</Optimize>
+    <WarningLevel>3</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <OutputPath>C:\Users\Chepo\Cubemos-Samples\build\csharp\interactive\Release\</OutputPath>
+    <PlatformTarget>x64</PlatformTarget>
+    <PlatformToolset>v141</PlatformToolset>
+    <AssemblyName>csharp-interactive</AssemblyName>
+    <StartAction>Program</StartAction>
+    <StartProgram>C:\Users\Chepo\Cubemos-Samples\build\csharp\interactive\Release\csharp-interactive.exe</StartProgram>
+    <AdditionalOptions>/EHsc /FS</AdditionalOptions>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>none</DebugType>
+    <DefineConstants>TRACE;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX</DefineConstants>
+    <ErrorReport>queue</ErrorReport>
+    <LangVersion>6</LangVersion>
+    <Optimize>true</Optimize>
+    <WarningLevel>1</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <OutputPath>C:\Users\Chepo\Cubemos-Samples\build\csharp\interactive\MinSizeRel\</OutputPath>
+    <PlatformTarget>x64</PlatformTarget>
+    <PlatformToolset>v141</PlatformToolset>
+    <AssemblyName>csharp-interactive</AssemblyName>
+    <StartAction>Program</StartAction>
+    <StartProgram>C:\Users\Chepo\Cubemos-Samples\build\csharp\interactive\MinSizeRel\csharp-interactive.exe</StartProgram>
+    <AdditionalOptions>/EHsc /FS</AdditionalOptions>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>none</DebugType>
+    <DefineConstants>TRACE;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX</DefineConstants>
+    <LangVersion>6</LangVersion>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <OutputPath>C:\Users\Chepo\Cubemos-Samples\build\csharp\interactive\RelWithDebInfo\</OutputPath>
+    <PlatformTarget>x64</PlatformTarget>
+    <PlatformToolset>v141</PlatformToolset>
+    <AssemblyName>csharp-interactive</AssemblyName>
+    <StartAction>Program</StartAction>
+    <StartProgram>C:\Users\Chepo\Cubemos-Samples\build\csharp\interactive\RelWithDebInfo\csharp-interactive.exe</StartProgram>
+    <AdditionalOptions>/EHsc /FS</AdditionalOptions>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <DefineConstants>TRACE;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NOMINMAX</DefineConstants>
+    <LangVersion>6</LangVersion>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.CSharp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.CSharp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemGroup>
+    <None Include="C:\Users\Chepo\Cubemos-Samples\src\csharp\interactive\CMakeLists.txt">
+      <Link>CMakeLists.txt</Link>
+    </None>
+  </ItemGroup>
+  <Target Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Name="CustomCommand_Debug_8728d50238bd77b08d62a2237acbc068" Inputs="C:/Users/Chepo/Cubemos-Samples/src/csharp/interactive/CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.18\Modules\CMakeCSharpInformation.cmake;C:\Users\Chepo\Cubemos-Samples\build\CMakeFiles\3.18.2\CMakeCSharpCompiler.cmake" Outputs="C:\Users\Chepo\Cubemos-Samples\build\csharp\interactive\CMakeFiles\generate.stamp">
+    <Exec Command="echo Building Custom Rule C:/Users/Chepo/Cubemos-Samples/src/csharp/interactive/CMakeLists.txt" />
+    <Exec Command="setlocal&#xA;&quot;C:\Program Files\CMake\bin\cmake.exe&quot; -SC:/Users/Chepo/Cubemos-Samples/src -BC:/Users/Chepo/Cubemos-Samples/build --check-stamp-file C:/Users/Chepo/Cubemos-Samples/build/csharp/interactive/CMakeFiles/generate.stamp&#xA;if %errorlevel% neq 0 goto :cmEnd&#xA;:cmEnd&#xA;endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone&#xA;:cmErrorLevel&#xA;exit /b %1&#xA;:cmDone&#xA;if %errorlevel% neq 0 goto :VCEnd" />
+  </Target>
+  <Target Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Name="CustomCommand_Release_8728d50238bd77b08d62a2237acbc068" Inputs="C:/Users/Chepo/Cubemos-Samples/src/csharp/interactive/CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.18\Modules\CMakeCSharpInformation.cmake;C:\Users\Chepo\Cubemos-Samples\build\CMakeFiles\3.18.2\CMakeCSharpCompiler.cmake" Outputs="C:\Users\Chepo\Cubemos-Samples\build\csharp\interactive\CMakeFiles\generate.stamp">
+    <Exec Command="echo Building Custom Rule C:/Users/Chepo/Cubemos-Samples/src/csharp/interactive/CMakeLists.txt" />
+    <Exec Command="setlocal&#xA;&quot;C:\Program Files\CMake\bin\cmake.exe&quot; -SC:/Users/Chepo/Cubemos-Samples/src -BC:/Users/Chepo/Cubemos-Samples/build --check-stamp-file C:/Users/Chepo/Cubemos-Samples/build/csharp/interactive/CMakeFiles/generate.stamp&#xA;if %errorlevel% neq 0 goto :cmEnd&#xA;:cmEnd&#xA;endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone&#xA;:cmErrorLevel&#xA;exit /b %1&#xA;:cmDone&#xA;if %errorlevel% neq 0 goto :VCEnd" />
+  </Target>
+  <Target Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Name="CustomCommand_MinSizeRel_8728d50238bd77b08d62a2237acbc068" Inputs="C:/Users/Chepo/Cubemos-Samples/src/csharp/interactive/CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.18\Modules\CMakeCSharpInformation.cmake;C:\Users\Chepo\Cubemos-Samples\build\CMakeFiles\3.18.2\CMakeCSharpCompiler.cmake" Outputs="C:\Users\Chepo\Cubemos-Samples\build\csharp\interactive\CMakeFiles\generate.stamp">
+    <Exec Command="echo Building Custom Rule C:/Users/Chepo/Cubemos-Samples/src/csharp/interactive/CMakeLists.txt" />
+    <Exec Command="setlocal&#xA;&quot;C:\Program Files\CMake\bin\cmake.exe&quot; -SC:/Users/Chepo/Cubemos-Samples/src -BC:/Users/Chepo/Cubemos-Samples/build --check-stamp-file C:/Users/Chepo/Cubemos-Samples/build/csharp/interactive/CMakeFiles/generate.stamp&#xA;if %errorlevel% neq 0 goto :cmEnd&#xA;:cmEnd&#xA;endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone&#xA;:cmErrorLevel&#xA;exit /b %1&#xA;:cmDone&#xA;if %errorlevel% neq 0 goto :VCEnd" />
+  </Target>
+  <Target Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Name="CustomCommand_RelWithDebInfo_8728d50238bd77b08d62a2237acbc068" Inputs="C:/Users/Chepo/Cubemos-Samples/src/csharp/interactive/CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.18\Modules\CMakeCSharpInformation.cmake;C:\Users\Chepo\Cubemos-Samples\build\CMakeFiles\3.18.2\CMakeCSharpCompiler.cmake" Outputs="C:\Users\Chepo\Cubemos-Samples\build\csharp\interactive\CMakeFiles\generate.stamp">
+    <Exec Command="echo Building Custom Rule C:/Users/Chepo/Cubemos-Samples/src/csharp/interactive/CMakeLists.txt" />
+    <Exec Command="setlocal&#xA;&quot;C:\Program Files\CMake\bin\cmake.exe&quot; -SC:/Users/Chepo/Cubemos-Samples/src -BC:/Users/Chepo/Cubemos-Samples/build --check-stamp-file C:/Users/Chepo/Cubemos-Samples/build/csharp/interactive/CMakeFiles/generate.stamp&#xA;if %errorlevel% neq 0 goto :cmEnd&#xA;:cmEnd&#xA;endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone&#xA;:cmErrorLevel&#xA;exit /b %1&#xA;:cmDone&#xA;if %errorlevel% neq 0 goto :VCEnd" />
+  </Target>
+  <ItemGroup>
+    <Compile Include="C:\Users\Chepo\Cubemos-Samples\src\csharp\interactive\Program.cs">
+      <Link>Program.cs</Link>
+    </Compile>
+    <Compile Include="C:\Users\Chepo\Cubemos-Samples\src\csharp\interactive\LogOutput.cs">
+      <Link>LogOutput.cs</Link>
+    </Compile>
+    <Compile Include="C:\Users\Chepo\Cubemos-Samples\src\csharp\interactive\Window.xaml.cs">
+      <Link>Window.xaml.cs</Link>
+    </Compile>
+    <Compile Include="C:\Users\Chepo\Cubemos-Samples\src\csharp\interactive\WindowCameraControlOptions.cs">
+      <Link>WindowCameraControlOptions.cs</Link>
+    </Compile>
+    <Compile Include="C:\Users\Chepo\Cubemos-Samples\src\csharp\interactive\WindowRenderingControlOptions.cs">
+      <Link>WindowRenderingControlOptions.cs</Link>
+    </Compile>
+    <Compile Include="C:\Users\Chepo\Cubemos-Samples\src\csharp\interactive\PoseEstimationRendering.cs">
+      <Link>PoseEstimationRendering.cs</Link>
+    </Compile>
+    <Compile Include="C:\Users\Chepo\Cubemos-Samples\src\csharp\interactive\DepthMapHelpers.cs">
+      <Link>DepthMapHelpers.cs</Link>
+    </Compile>
+    <Compile Include="C:\Users\Chepo\Cubemos-Samples\src\csharp\interactive\Properties\AssemblyInfo.cs">
+      <Link>Properties\AssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="C:\Users\Chepo\Cubemos-Samples\src\csharp\interactive\InfoDialog.xaml.cs">
+      <Link>InfoDialog.xaml.cs</Link>
+    </Compile>
+    <Compile Include="C:\Users\Chepo\Cubemos-Samples\src\csharp\Common.cs">
+      <Link>Common.cs</Link>
+    </Compile>
+    <Resource Include="C:\Users\Chepo\Cubemos-Samples\src\csharp\interactive\dep\res\cubemoslogo.png">
+      <Link>Resources\cubemoslogo.png</Link>
+    </Resource>
+    <Resource Include="C:\Users\Chepo\Cubemos-Samples\src\csharp\interactive\dep\res\usageGuide.png">
+      <Link>Resources\usageGuide.png</Link>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore">
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </Reference>
+    <Reference Include="System">
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </Reference>
+    <Reference Include="System.Data">
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </Reference>
+    <Reference Include="System.Xaml">
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </Reference>
+    <Reference Include="Intel.Realsense">
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <Private>True</Private>
+      <HintPath>C:\Users\Chepo\Cubemos-Samples\src\csharp\interactive\..\realsense\dep\librealsense\Intel.Realsense.dll</HintPath>
+    </Reference>
+    <Reference Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Include="Cubemos.SkeletonTracking">
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <Private>True</Private>
+      <HintPath>C:\Program Files\Cubemos\SkeletonTracking\bin\Cubemos.SkeletonTracking.dll</HintPath>
+    </Reference>
+    <Reference Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Include="Cubemos.Core">
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <Private>True</Private>
+      <HintPath>C:\Program Files\Cubemos\SkeletonTracking\bin\Cubemos.Core.dll</HintPath>
+    </Reference>
+    <Reference Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Include="Cubemos.SkeletonTracking">
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <Private>True</Private>
+      <HintPath>C:\Program Files\Cubemos\SkeletonTracking\bin\Cubemos.SkeletonTracking.dll</HintPath>
+    </Reference>
+    <Reference Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Include="Cubemos.Core">
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <Private>True</Private>
+      <HintPath>C:\Program Files\Cubemos\SkeletonTracking\bin\Cubemos.Core.dll</HintPath>
+    </Reference>
+    <Reference Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Include="Cubemos.SkeletonTracking">
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <Private>True</Private>
+      <HintPath>C:\Program Files\Cubemos\SkeletonTracking\bin\Cubemos.SkeletonTracking.dll</HintPath>
+    </Reference>
+    <Reference Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Include="Cubemos.Core">
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <Private>True</Private>
+      <HintPath>C:\Program Files\Cubemos\SkeletonTracking\bin\Cubemos.Core.dll</HintPath>
+    </Reference>
+    <Reference Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Include="Cubemos.SkeletonTracking">
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <Private>True</Private>
+      <HintPath>C:\Program Files\Cubemos\SkeletonTracking\bin\Cubemos.SkeletonTracking.dll</HintPath>
+    </Reference>
+    <Reference Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Include="Cubemos.Core">
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <Private>True</Private>
+      <HintPath>C:\Program Files\Cubemos\SkeletonTracking\bin\Cubemos.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="C:\Users\Chepo\Cubemos-Samples\src\csharp\interactive\Window.xaml">
+      <Link>Window.xaml</Link>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="C:\Users\Chepo\Cubemos-Samples\src\csharp\interactive\InfoDialog.xaml">
+      <Link>InfoDialog.xaml</Link>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\Chepo\Cubemos-Samples\build\ZERO_CHECK.vcxproj">
+      <Project>{FE8ED753-1BE4-3AD1-86E1-DEA64056883C}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="writer1\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'MinSizeRel'">
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'RelWithDebInfo'">
+  </PropertyGroup>
+  <PropertyGroup>
+    <BuildDependsOn>
+      CustomCommand_Debug_8728d50238bd77b08d62a2237acbc068;
+      CustomCommand_MinSizeRel_8728d50238bd77b08d62a2237acbc068;
+      CustomCommand_RelWithDebInfo_8728d50238bd77b08d62a2237acbc068;
+      CustomCommand_Release_8728d50238bd77b08d62a2237acbc068;
+      $(BuildDependsOn)
+</BuildDependsOn>
+  </PropertyGroup>
+</Project>

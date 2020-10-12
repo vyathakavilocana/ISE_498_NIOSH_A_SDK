@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Chepo\Cubemos-Samples\build\CMakeFiles\6b581517163ff07a1cf9a308a6fc49bc\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{112947B8-9639-3A98-B166-C408CB210876}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
