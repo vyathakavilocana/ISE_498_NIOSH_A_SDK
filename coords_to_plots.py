@@ -49,7 +49,7 @@ def Render_Coordinates(joint):
                 if count == 0:
                     continue
                 
-                #if list empty for some reason, skip to next motion
+                #if list empty for some reason, skip to next frame
                 if len(joint_coords) < 2:
                     continue
                 
