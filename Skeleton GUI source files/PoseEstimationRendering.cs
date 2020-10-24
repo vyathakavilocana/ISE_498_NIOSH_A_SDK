@@ -12,15 +12,17 @@ using static Cubemos.SkeletonTracking.Api;
 namespace Cubemos.Samples
 {
     // Skeletons rendering for Skeleton Tracking for the Window.xaml
-    public partial class CaptureWindow : Window {
+    public partial class CaptureWindow : Window
+    {
 
         // Get time
         public static String GetTimestamp(DateTime value)
         {
             return value.ToString("yyyyMMddHHmmssffff");
         }
+        
 
-        public static String FILE_NAME1 = GetTimestamp(DateTime.Now); // Modifiable
+        //public static String FILE_NAME1 = GetTimestamp(DateTime.Now); // Modifiable
         // The list of colors to use for skeleton tracking
         static List<System.Drawing.Pen> skeletonRenderColors = new List<System.Drawing.Pen>(
           new[]{ new System.Drawing.Pen(System.Drawing.ColorTranslator.FromHtml("#d5fe64")),
@@ -62,30 +64,35 @@ namespace Cubemos.Samples
                                            int nImageWidth,
                                            int nImageHeight,
                                            bool bEnableTracking,
-                                           Graphics graphics)  
+                                           Graphics graphics)
         {
             int nEllipseSize = (int)(nImageWidth / 64); // 20 at 1280 and 10 at 640 width
 
-            for (int skeleton_index = 0; skeleton_index < skeletonKeypoints.Count; skeleton_index++) {
+            for (int skeleton_index = 0; skeleton_index < skeletonKeypoints.Count; skeleton_index++)
+            {
                 var skeleton = skeletonKeypoints[skeleton_index];
 
                 System.Drawing.Pen pen;
-                if (bEnableTracking) {
+                if (bEnableTracking)
+                {
                     pen = skeletonRenderColors[skeletonKeypoints[skeleton_index].id % skeletonRenderColors.Count];
                 }
-                else {
+                else
+                {
                     pen = new System.Drawing.Pen(System.Drawing.ColorTranslator.FromHtml("#d5fe64"));
                 }
 
                 // 4 at 1280 and 2 at 640 width
                 pen.Width = nImageWidth / 320;
                 ////////////////////////////////////////////////////////////////skeleton.listJoints.Count
-                for (int joint_index = 0; joint_index < skeleton.listJoints.Count; joint_index++) {
+                for (int joint_index = 0; joint_index < skeleton.listJoints.Count; joint_index++)
+                {
                     Coordinate coordinate = skeleton.listJoints[joint_index];
-                    if (coordinate.x > 0 && coordinate.y > 0) {
+                    if (coordinate.x > 0 && coordinate.y > 0)
+                    {
                         graphics.FillEllipse(new SolidBrush(System.Drawing.ColorTranslator.FromHtml("#16379B")),
-                                             (int) coordinate.x - (int)(nImageWidth / 128),
-                                             (int) coordinate.y -
+                                             (int)coordinate.x - (int)(nImageWidth / 128),
+                                             (int)coordinate.y -
                                                (int)(nImageWidth / 128), // 10 at 1280 and 5 at 640 width
                                              nEllipseSize,
                                              nEllipseSize);
@@ -94,20 +101,22 @@ namespace Cubemos.Samples
 
                 Coordinate coordinateValid = new Coordinate(-1.0, -1.0);
                 coordinateValid =
-                  skeleton.listJoints.Find(delegate(Coordinate crd) { return crd.x >= 0 && crd.y >= 0; });
+                  skeleton.listJoints.Find(delegate (Coordinate crd) { return crd.x >= 0 && crd.y >= 0; });
 
                 // Render the connecting lines between the detected keypoints
-                for (int pair_index = 0; pair_index < renderSkeletonPointPairs.Count; pair_index++) {
+                for (int pair_index = 0; pair_index < renderSkeletonPointPairs.Count; pair_index++)
+                {
                     var pointPair = renderSkeletonPointPairs[pair_index];
-                    Coordinate startPoint = new Coordinate((int) skeleton.listJoints[(int) pointPair.x].x,
-                                                           (int) skeleton.listJoints[(int) pointPair.x].y);
-                    Coordinate endPoint = new Coordinate((int) skeleton.listJoints[(int) pointPair.y].x,
-                                                         (int) skeleton.listJoints[(int) pointPair.y].y);
+                    Coordinate startPoint = new Coordinate((int)skeleton.listJoints[(int)pointPair.x].x,
+                                                           (int)skeleton.listJoints[(int)pointPair.x].y);
+                    Coordinate endPoint = new Coordinate((int)skeleton.listJoints[(int)pointPair.y].x,
+                                                         (int)skeleton.listJoints[(int)pointPair.y].y);
 
-                    if (startPoint.x > 0 && startPoint.y > 0 && endPoint.y > 0 && endPoint.y > 0) {
+                    if (startPoint.x > 0 && startPoint.y > 0 && endPoint.y > 0 && endPoint.y > 0)
+                    {
                         graphics.DrawLine(pen,
-                                          new System.Drawing.Point((int) startPoint.x, (int) startPoint.y),
-                                          new System.Drawing.Point((int) endPoint.x, (int) endPoint.y));
+                                          new System.Drawing.Point((int)startPoint.x, (int)startPoint.y),
+                                          new System.Drawing.Point((int)endPoint.x, (int)endPoint.y));
                     }
                 }
             }
@@ -118,44 +127,38 @@ namespace Cubemos.Samples
         /// \param nImageWidth [in] image width in pixel
         /// \param graphics [in] graphics object to display the skeletons
         public void renderCoordinates(List<SkeletonKeypoints> skeletons, int nImageWidth, Graphics graphics)
-        {
-            
-            foreach (var skeleton in skeletons) {
+        {   TextWriter writer2 = new StreamWriter(@"C:\Users\Siagon\Classes\ISE 498\Code\test.txt", true);
+
+            foreach (var skeleton in skeletons)
+            {
 
                 int coordNumber = 0;
                 string coordString;
-                
-                foreach (Coordinate coordinate in skeleton.listJoints) {
+
+                foreach (Coordinate coordinate in skeleton.listJoints)
+                {
 
                     String timeStamp = GetTimestamp(DateTime.Now);
                     timeStamp = DateTime.Now.ToString("HH:mm:ss");
-                    //3,6,4,7,9,12
+                    //box pickup 3,6,4,7,9,12
+                    //hand raise 
                     coordNumber++;
                     if (coordinate.x <= 0 || coordinate.y <= 0)
                         continue;
-
-                    if (coordNumber < 2 )
-                        continue;
-                    if(coordNumber == 5)
-                        continue;
-                    if (coordNumber == 8)
-                        continue;
-                    if (coordNumber == 10)
-                        continue;
-                    if (coordNumber == 11)
-                        continue;
-                    if (coordNumber > 12)
-                        continue;
+                    
+                    //if (coordNumber > 8)
+                        //continue;
                     // manage the drawing here
-                    float[, ] depthValues = DepthMapHelpers.getDepthInKernel(
-                      depthFrame, (int) coordinate.x, (int) coordinate.y, nKernelSize : 5);
+                    float[,] depthValues = DepthMapHelpers.getDepthInKernel(
+                      depthFrame, (int)coordinate.x, (int)coordinate.y, nKernelSize: 5);
 
                     float averageDepth = DepthMapHelpers.averageValidDepthFromNeighbourhood(depthValues);
-                    if (averageDepth > 0) {
+                    if (averageDepth > 0)
+                    {
                         System.Windows.Media.Media3D.Point3D worldCoordinates =
                           DepthMapHelpers.WorldCoordinate(averageDepth,
-                                                          (int) coordinate.x,
-                                                          (int) coordinate.y,
+                                                          (int)coordinate.x,
+                                                          (int)coordinate.y,
                                                           intrinsicsDepthImagerMaster.fx,
                                                           intrinsicsDepthImagerMaster.fy,
                                                           intrinsicsDepthImagerMaster.ppx,
@@ -163,23 +166,26 @@ namespace Cubemos.Samples
 
                         string coordinateAsString = String.Format(
                           "({0:F2}, {1:F2}, {2:F2})", worldCoordinates.X, worldCoordinates.Y, worldCoordinates.Z);
+
                         
-                        TextWriter writer2 = new StreamWriter(@"C:\Users\Chepo\Documents\courses\Fall 2020\ISE 498\cdoe\box_pickup_10-14_REDO.txt", true);
                         coordString = coordNumber.ToString();
-                        writer2.WriteLine("Joint #" + coordString + " coordinates: " + coordinateAsString + " @ "+ timeStamp);
-                        writer2.Close();
+                        writer2.WriteLine("Joint #" + coordString + " coordinates: " + coordinateAsString + " @ "); //+ timeStamp);
+                        
 
                         // End edit
 
                         graphics.DrawString(coordinateAsString,
-                        
+
                                             new Font("Avenir", (int)(nImageWidth / 106)),
                                             Brushes.GreenYellow,
-                                            new PointF((float) coordinate.x, (float) coordinate.y));
+                                            new PointF((float)coordinate.x, (float)coordinate.y));
                     }
+                    
 
                 }
             }
+            writer2.Close();
         }
+
     }
 }
